@@ -3,3 +3,4 @@ cohere
 gunicorn
 flask-wtf
 wtforms
+requests
