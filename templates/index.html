@@ -253,35 +253,34 @@ html,body{height:100%;overflow:hidden;font-family:'Sora',sans-serif;background:v
 .toast.err{border-color:var(--red)}.toast.ok{border-color:var(--accent)}
 
 /* ── RESPONSIVE ── */
-@media(max-width:1100px){
-  .news-panel{width:100%;max-width:380px}
-}
+@media(max-width:900px){:root{--news-w:100%}.news-panel{width:100%;max-width:100%;border-left:none}}
 @media(max-width:768px){
-  .sidebar{position:fixed;top:0;left:0;height:100%;transform:translateX(-100%);box-shadow:4px 0 24px rgba(0,0,0,.6)}
+  .sidebar{position:fixed;top:0;left:0;height:100%;transform:translateX(-100%);box-shadow:6px 0 30px rgba(0,0,0,.7)}
   .sidebar.open{transform:translateX(0)}
   .sb-close{display:block}
   .hamburger{display:flex}
-  .model-badge{font-size:10.5px;padding:5px 9px}
-  .lang-select{font-size:10px;padding:4px 6px;max-width:90px}
-  .msgs{padding:18px 12px 6px}
-  .bubble{max-width:88%;font-size:13.5px}
+  .model-pill{font-size:10.5px;padding:5px 10px}
+  .lang-select{font-size:10px;padding:5px 7px;max-width:100px}
+  .msgs{padding:16px 12px 8px}
+  .bub{max-width:88%;font-size:13.5px}
   .chips{grid-template-columns:1fr;max-width:320px}
-  .input-area{padding:10px 12px 14px}
-  .input-hint{display:none}
-  .news-panel{width:100%;max-width:100%;border-left:none}
+  .input-zone{padding:10px 12px;margin-bottom:56px}
+  .hint{display:none}
+  .mobile-nav{display:flex}
+  .news-panel{border-radius:0}
+  .art-sheet{max-height:92vh}
 }
 @media(max-width:480px){
-  :root{--sidebar:84vw}
-  .topbar{padding:0 10px}
-  .msgs{padding:14px 10px 4px;gap:2px}
-  .avatar{width:26px;height:26px;font-size:11px}
-  .bubble{max-width:92%;font-size:13px;padding:9px 12px}
-  .input-box{font-size:16px;padding:12px 130px 12px 14px}
-  .empty-title{font-size:18px}
-  .article-title{font-size:15px}
-}
-@supports(padding-bottom:env(safe-area-inset-bottom)){
-  .input-area{padding-bottom:calc(14px + env(safe-area-inset-bottom))}
+  :root{--sidebar-w:84vw}
+  .topbar{padding:0 10px;height:52px;min-height:52px}
+  .msgs{padding:12px 10px 6px;gap:1px}
+  .ava{width:27px;height:27px;font-size:11px}
+  .bub{max-width:92%;font-size:13px;padding:9px 12px}
+  .input-box{font-size:16px;padding:12px 106px 12px 14px}
+  .empty-h{font-size:20px}
+  .art-title{font-size:17px}
+  .headline-title{font-size:15px}
+  .tbtn[title="New chat"]{display:none}
 }
 </style>
 </head>
@@ -873,4 +872,3 @@ inputEl.focus();
 </script>
 </body>
 </html>
-
